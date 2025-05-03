@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient(to top left, #5b42f3, #00ddeb);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  form input, form button {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+  }
+  
+  form button {
+    background-color: #f7ba2b;
+    color: #181818;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .listas {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .card {
+    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+    padding: 5px;
+    border-radius: 1rem;
+    background: var(--background);
+    position: relative;
+  }
+  
+  .card::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: var(--background);
+    z-index: -1;
+    transition: opacity 0.5s;
+  }
+  
+  .card:hover::after {
+    opacity: 0;
+  }
+  
+  .card-info {
+    background: #181818;
+    color: white;
+    border-radius: 0.7rem;
+    padding: 1rem;
+  }
+  
+  .card .title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    background: #333;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  li:hover {
+    transform: scale(1.02);
+  }
+  
+  .checkbox-wrapper-4 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-wrapper-4 .cbx {
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-wrapper-4 .cbx span:first-child {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    margin-right: 8px;
+    border-radius: 4px;
+    background: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .checkbox-wrapper-4 .inp-cbx:checked + .cbx span:first-child {
+    background: #07f;
+    border-color: #07f;
+  }
+  
+  .checkbox-wrapper-4 input {
+    display: none;
+  }
+  
+  @media (min-width: 700px) {
+    .listas {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .card {
+      width: 48%;
+    }
+  }
+  #eliminarCompletadas {
+    margin-top: 1rem;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  #eliminarCompletadas:hover {
+    background: #e60000;
+  }
+    

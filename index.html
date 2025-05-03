@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda Interactiva</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Agenda Interactiva</h1>
+    <form id="formulario">
+      <input type="text" id="tarea" placeholder="Escribe tu tarea..." required>
+      <input type="date" id="fecha" required>
+      <button type="submit">Agregar</button>
+    </form>
+
+    <div class="listas">
+      <div class="card">
+        <div class="card-info">
+          <h2 class="title">Tareas Activas</h2>
+          <ul id="listaTareasActivas"></ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-info">
+          <h2 class="title">Tareas Completadas</h2>
+          <ul id="listaTareasCompletadas"></ul>
+          <button id="eliminarCompletadas">Eliminar tareas seleccionadas</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
